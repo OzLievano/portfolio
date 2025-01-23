@@ -1,101 +1,98 @@
-import Image from "next/image";
+import Projects from "./components/Projects";
+import SkillsList from "./components/SkillsList";
+import { getSkills } from "@/app/api/routes"; 
+const skillData = getSkills();
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-gray-100 text-gray-800">
+      <header className="bg-blue-600 text-white text-center py-6">
+        <h1 className="text-4xl font-bold">Osvaldo Lievano</h1>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 mt-8">
+        <section className="mb-12">
+          <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
+            About Me
+          </h3>
+          <p className="mb-4">
+          Hi, I’m Osvaldo Lievano—feel free to call me Ozzy! I’m a Full-Stack Software Engineer with expertise in React, Django, TypeScript, Python, and AWS. This portfolio draws inspiration from one of my all-time favorite games, Old School RuneScape.
+          </p>
+          <p className="mb-4">
+          Old School RuneScape ignited my passion for continuous growth. From setting ambitious goals to adapting skills to meet market demands, the game taught me valuable lessons about perseverance, creativity, and having fun while putting in the work—or as we say in gaming, "grinding."
+          </p>
+          <p className="mb-4">
+          This site is built with Next.js—not exactly necessary for a portfolio, but a fantastic way to challenge myself and explore new technologies. My ultimate goal is to keep evolving my skills, which means this page will always be a work in progress.
+          </p>
+          <p className="mb-4">
+          Outside of work, you’ll often find me baking, dancing salsa, or competing in beach and indoor volleyball tournaments. Life’s about balance, and I strive to bring the same energy and dedication to my hobbies as I do to my craft.
+          </p>
+        </section>
+
+        <section className="mb-12 relative">
+          <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
+            Projects
+          </h3>
+          <Projects />
+        </section>
+
+        <section className="relative mb-12">
+        <div className="bg-blue-100 p-4 rounded-lg shadow-md z-20 mb-8">
+  <p className="text-lg font-semibold">Experience Info:</p>
+  <p>1 Hour spent in any one of these skills equates to ~60,000 experience gained.</p>
+</div>
+
+<div>
+  <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
+    Skills
+  </h3>
+            <SkillsList skills={skillData} />
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
+            Contact Information
+          </h3>
+          <ul className="flex space-x-4">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/osvaldo-lievano/"
+                className="text-blue-500 hover:underline"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.github.com/Ozlievano"
+                className="text-blue-500 hover:underline"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.x.com/Ozlievano"
+                className="text-blue-500 hover:underline"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:osvaldoalievano@gmail.com"
+                className="text-blue-500 hover:underline"
+              >
+                Send Email
+              </a>
+            </li>
+            <li>
+              <a href="resume.pdf" className="text-blue-500 hover:underline" download>Download Resume</a>
+              </li>
+          </ul>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 "use client";
-import { Skill } from "@/utils/db";
 import { getExperienceDelta } from "../api/routes";
 import { useEffect, useState } from "react";
 import SkillExperienceInfo from "./SkillExperienceInfo";

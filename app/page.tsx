@@ -27,6 +27,51 @@ export default function Page() {
           <p className="mb-4">
           Outside of work, you’ll often find me baking, dancing salsa, or competing in beach and indoor volleyball tournaments. Life’s about balance, and I strive to bring the same energy and dedication to my hobbies as I do to my craft.
           </p>
+          <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
+            Contact Information
+          </h3>
+          <ul className="flex space-x-4">
+            <li>
+            <a
+  href="https://www.linkedin.com/in/osvaldo-lievano/"
+  className="text-blue-500 hover:underline"
+  aria-label="LinkedIn Profile"
+>
+                <i className="fa-brands fa-linkedin"></i> Linkedin
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.github.com/Ozlievano"
+                className="text-blue-500 hover:underline"
+                aria-label="Github Profile"
+              >
+                <i className="fa-brands fa-github"></i> Github
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.x.com/Ozlievano"
+                className="text-blue-500 hover:underline"
+                aria-label="Twitter Profile"
+              >
+                <i className="fa-brands fa-twitter"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:osvaldoalievano@gmail.com"
+                className="text-blue-500 hover:underline"
+              >
+                <i className="fa-solid fa-envelope"></i> Email Me
+              </a>
+            </li>
+            <li>
+              <a href="resume.pdf" className="text-blue-500 hover:underline" download>
+              <i className="fa-solid fa-download"></i> Resume
+              </a>
+              </li>
+          </ul>
         </section>
 
         <section className="mb-12 relative">
@@ -48,49 +93,6 @@ export default function Page() {
   </h3>
             <SkillsList skills={skillData} />
           </div>
-        </section>
-
-        <section>
-          <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
-            Contact Information
-          </h3>
-          <ul className="flex space-x-4">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/osvaldo-lievano/"
-                className="text-blue-500 hover:underline"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.github.com/Ozlievano"
-                className="text-blue-500 hover:underline"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.x.com/Ozlievano"
-                className="text-blue-500 hover:underline"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:osvaldoalievano@gmail.com"
-                className="text-blue-500 hover:underline"
-              >
-                Send Email
-              </a>
-            </li>
-            <li>
-              <a href="resume.pdf" className="text-blue-500 hover:underline" download>Download Resume</a>
-              </li>
-          </ul>
         </section>
       </main>
     </div>

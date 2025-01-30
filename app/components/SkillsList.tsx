@@ -1,4 +1,4 @@
-import { Skill, SkillData } from "@/utils/db";
+import { SkillData } from "@/utils/db";
 import SkillInfo from "./SkillInfo";
 
 interface SkillComponentProp {

@@ -1,5 +1,4 @@
 import { Skill, allSkillData, experiencePerLevel } from "@/utils/db";
-import next from "next";
 
 export const getSkills = () => {
   return allSkillData;

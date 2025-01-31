@@ -1,6 +1,6 @@
 import Projects from "./components/Projects";
-import SkillsList from "./components/SkillsList";
 import { getSkills } from "@/app/api/routes";
+import Image from "next/image";
 const skillData = getSkills();
 
 export default function Page() {
@@ -113,19 +113,18 @@ export default function Page() {
         </section>
 
         <section className="relative mb-12">
-          <div className="bg-blue-100 p-4 rounded-lg shadow-md z-20 mb-8">
-            <p className="text-lg font-semibold">Experience Info:</p>
-            <p>
-              1 Hour spent in any one of these skills equates to ~60,000
-              experience gained.
-            </p>
-          </div>
-
           <div>
             <h3 className="text-2xl font-semibold border-b-2 border-blue-600 inline-block pb-1 mb-4">
               Skills
             </h3>
-            <SkillsList skills={skillData} />
+            <div className="w-full flex justify-center">
+              <Image
+                src="/skills.png"
+                width={500}
+                height={500}
+                alt="techStack"
+              />
+            </div>
           </div>
         </section>
       </main>

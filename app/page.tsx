@@ -16,15 +16,15 @@ export default function Page() {
           <p className="mb-4">
             Hi, I&rsquo;m Osvaldo Lievano—feel free to call me Ozzy! I&rsquo;m a
             Full-Stack Software Engineer with expertise in React, Django,
-            TypeScript, Python, and AWS. This portfolio draws inspiration from
-            one of my all-time favorite games, Old School RuneScape.
+            TypeScript, Python, and AWS.
           </p>
           <p className="mb-4">
-            Old School RuneScape ignited my passion for continuous growth. From
-            setting ambitious goals to adapting skills to meet market demands,
-            the game taught me valuable lessons about perseverance, creativity,
-            and having fun while putting in the work—or as we say in gaming,
-            &quot;grinding.&quot;
+            When I&rsquo;m not working, you&rsquo;ll find me constantly learning
+            new things—whether it's salsa dancing, baking, Warhammer, reading,
+            or gaming. From setting ambitious goals to adapting my skills to
+            meet market demands, my hobbies have taught me valuable lessons in
+            perseverance, creativity, and the importance of enjoying the
+            process. Or, as we say in gaming, &quot;grinding.&quot;
           </p>
           <p className="mb-4">
             This site is built with Next.js—not exactly necessary for a

@@ -14,21 +14,21 @@ export default function Page() {
             About Me
           </h2>
           <p className="mb-4">
-            Hi, I&rsquo;m Osvaldo Lievano—feel free to call me Ozzy! I&rsquo;m a
-            Full-Stack Software Engineer with expertise in React, Django,
-            TypeScript, Python, and AWS.
+            Hi, I&rsquo;m Osvaldo Lievano&mdash;feel free to call me Ozzy!
+            I&rsquo;m a Full-Stack Software Engineer with expertise in React,
+            Django, TypeScript, Python, and AWS.
           </p>
           <p className="mb-4">
             When I&rsquo;m not working, you&rsquo;ll find me constantly learning
-            new things—whether it's salsa dancing, baking, Warhammer, reading,
-            or gaming. From setting ambitious goals to adapting my skills to
-            meet market demands, my hobbies have taught me valuable lessons in
-            perseverance, creativity, and the importance of enjoying the
-            process. Or, as we say in gaming, &quot;grinding.&quot;
+            new things&mdash;whether it&rsquo;s salsa dancing, baking,
+            Warhammer, reading, or gaming. From setting ambitious goals to
+            adapting my skills to meet market demands, my hobbies have taught me
+            valuable lessons in perseverance, creativity, and the importance of
+            enjoying the process. Or, as we say in gaming, &quot;grinding.&quot;
           </p>
 
           <p className="mb-4">
-            This site is built with Next.js—not exactly necessary for a
+            This site is built with Next.js&mdash;not exactly necessary for a
             portfolio, but a fantastic way to challenge myself and explore new
             technologies. My ultimate goal is to keep evolving my skills, which
             means this page will always be a work in progress.

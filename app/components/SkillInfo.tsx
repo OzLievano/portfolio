@@ -22,11 +22,12 @@ const SkillInfo = ({ skill, level, currentExperience, image }: SkillProps) => {
 
   return (
     <div
-      className="relative w-1/5 h-36 border-2 border-black mx-2 my-4 flex flex-col justify-center items-center bg-white rounded-lg"
+      className="relative w-full sm:w-1/2 md:w-1/4 lg:w-1/5 h-36 sm:h-40 border-2 border-black mx-2 my-4 flex flex-col justify-center items-center bg-white rounded-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => setIsHovered(!isHovered)} // Toggle hover on mobile
     >
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="w-full h-full flex flex-col justify-center items-center">
         <Image
           src={`/${image}`}
           alt={skill}
@@ -34,12 +35,12 @@ const SkillInfo = ({ skill, level, currentExperience, image }: SkillProps) => {
           height={50}
           className="w-12 h-12 object-contain"
         />
-        <span>{level}/99</span>
+        <span className="text-sm md:text-base font-semibold">{level}/99</span>
       </div>
 
-      {/* Show Experience Info when hovered */}
+      {/* Hover/Tap Tooltip for Experience Info */}
       {isHovered && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gray-700 text-white p-3 rounded-b-lg z-10">
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-700 text-white p-3 rounded-lg z-10 w-40 text-center shadow-lg">
           <SkillExperienceInfo
             skill={skill}
             currExp={currentExperience}

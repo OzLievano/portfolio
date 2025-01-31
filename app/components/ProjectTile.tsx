@@ -27,19 +27,19 @@ const ProjectTile = ({
   const embedUrl = getYouTubeEmbedUrl(videoUrl);
 
   return (
-    <div className="w-1/3 p-4 bg-gray-100 hover:bg-gray-200 rounded-md m-5">
+    <div className="w-full md:w-1/3 p-4 sm:p-3 bg-gray-100 hover:bg-gray-200 rounded-md m-2 md:m-5">
       <h3 className="text-lg font-bold">{title}</h3>
       <p className="text-sm">{description}</p>
       {embedUrl ? (
-        <div className="mt-4">
+        <div className="mt-4 aspect-video">
           <iframe
             width="100%"
-            height="200"
+            height="100%"
             src={embedUrl}
             title={title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="rounded-md"
+            className="rounded-md w-full h-full"
           ></iframe>
         </div>
       ) : (

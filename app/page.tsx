@@ -26,6 +26,7 @@ export default function Page() {
             perseverance, creativity, and the importance of enjoying the
             process. Or, as we say in gaming, &quot;grinding.&quot;
           </p>
+
           <p className="mb-4">
             This site is built with Next.js—not exactly necessary for a
             portfolio, but a fantastic way to challenge myself and explore new

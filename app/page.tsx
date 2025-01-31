@@ -1,7 +1,5 @@
 import Projects from "./components/Projects";
-import { getSkills } from "@/app/api/routes";
 import Image from "next/image";
-const skillData = getSkills();
 
 export default function Page() {
   return (
